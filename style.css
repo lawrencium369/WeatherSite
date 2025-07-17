@@ -1,0 +1,22 @@
+* {
+  text-align: center;
+  background-color: #dee3dd;
+  color: black;
+}
+.my-form {
+  color: #f7c471;
+}
+img{
+  border: solid 5px white;
+}
+input {
+  color: #dee3dd;
+  border: solid 1px black;
+}
+.error{
+  color: red;
+}
+
+h1 {
+  color: #f7c471;
+}
