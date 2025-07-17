@@ -21,3 +21,6 @@ input {
 h1 {
   color: #f7c471;
 }
+#top {
+  border: solid 1px #afbecc;
+}
