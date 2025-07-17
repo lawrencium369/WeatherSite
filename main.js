@@ -18,6 +18,7 @@ myForm.addEventListener('submit', function(e) {
       window.location.href = 'city.html'; // Navigate
     } else {
       msg.textContent = 'City not recognized.';
+      setTimeout(() => msg.textContent = '', 2000);
     }
   }
 
