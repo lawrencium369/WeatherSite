@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+    <title> Weather data </title>
+</head>
+<body>
+    <header>
+        <h1> WEATHER TODAY </h1>
+    </header>
+    <h3 id="data"></h3>
+    <script>
+        const city = localStorage.getItem('selectedCity');
+        const data = document.getElementById('data');
+
+        if (city) {
+        data.textContent = `Welcome to ${city.toUpperCase()}`;
+        } else {
+        data.textContent = 'No city selected.';
+        }
+    </script>
+</body>
+</html>

@@ -10,7 +10,8 @@ img{
   border: solid 5px white;
 }
 input {
-  color: #dee3dd;
+  background-color: #dee3dd;
+  color: black;
   border: solid 1px black;
 }
 .error{
