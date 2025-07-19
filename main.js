@@ -2,8 +2,7 @@ const myForm = document.querySelector('#my-form');
 const cityName = document.querySelector('#cityName');
 const msg = document.querySelector('#msg');
 const inputField = document.querySelector('#cityName');
-
-let cities = ['rabat', 'fes'];
+const api_key = "d6ddc59f0b2555f271326ca7a6fd3f4e";
 
 myForm.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -24,3 +23,14 @@ myForm.addEventListener('submit', function(e) {
 
   inputField.value = '';
 });
+
+async function getWeatherData(city){
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
+  const response = await fetch(apiUrl);
+
+  if(!response.ok){
+    throw new Error("weather data not found");
+  }
+  return response.json();
+}
+
