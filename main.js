@@ -6,7 +6,13 @@ const api_key = "d6ddc59f0b2555f271326ca7a6fd3f4e";
 myForm.addEventListener('submit', async event => {
     event.preventDefault();
 
+    if(cityInput.value === ''){
+        cityInput.style.backgroundColor = "red";
+        setTimeout(()=>cityInput.style.backgroundColor = "#dee3dd", 1000);
+    }
+
     const city = cityInput.value;
+    cityInput.value = '';
 
     if(city){
         try{
@@ -18,8 +24,6 @@ myForm.addEventListener('submit', async event => {
         }
         
     }
-
-  inputField.value = '';
 });
 
 async function getWeatherData(city){
