@@ -1,7 +1,9 @@
+import API_KEY from './const.js';
+
 const myForm = document.querySelector('#my-form');
 const Display = document.querySelector('.Display');
 const cityInput = document.querySelector('#cityName');
-const api_key = "d6ddc59f0b2555f271326ca7a6fd3f4e";
+const api_key = API_KEY;
 
 myForm.addEventListener('submit', async event => {
     event.preventDefault();
